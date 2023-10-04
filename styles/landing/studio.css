@@ -1,0 +1,144 @@
+.studio__container {
+    align-items: center;
+}
+
+.studio__arrow {
+    cursor: pointer;
+}
+
+.studio__arrow:first-child {
+    justify-content: flex-end;
+}
+
+.studio__arrow_fill {
+    fill: #fff;
+    transition: var(--time);
+}
+
+.studio__arrow_fill:hover {
+    fill: var(--accent-color);
+    transition: var(--time);
+}
+
+.studio__window {
+    overflow: hidden;
+    position: relative;
+    height: 600px;
+}
+
+.studio__slider {
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: var(--time);
+    transition-timing-function: cubic-bezier(0,0,.6,1.5);
+}
+
+.studio__card {
+    position: relative;
+}
+
+.studio__card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.studio__card-over {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(356.79deg, rgba(142, 46, 16, 0.57) 5.04%, rgba(217, 217, 217, 0) 73.07%);
+}
+
+.studio__card_heading {
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Montserrat-Regular', sans-serif;
+    margin-bottom: 30px;
+}
+
+.studio__card_font {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+@media (max-width: 1400px) {
+
+    .studio__window {
+        height: 540px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .studio__window {
+        height: 440px;
+    }
+
+    .studio__card_heading {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .studio__card_font {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .studio__arrow:first-child {
+        justify-content: flex-start;
+    }
+
+    .studio__arrow:last-child {
+        justify-content: flex-end;
+    }
+
+    .studio__card_font {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .studio__arrow-left {
+        width: 80%;
+    }
+
+    .studio__arrow-right {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .studio__card_heading {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .studio__card_font {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+}

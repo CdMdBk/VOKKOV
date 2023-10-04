@@ -1,0 +1,57 @@
+.preloader {
+    opacity: 1;
+    transition: var(--time);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 10;
+}
+
+.preloader_image {
+    width: 8vmax;
+    height: 8vmax;
+    border-right: 4px solid var(--accent-color);
+    border-radius: 100%;
+    animation: spinRight 800ms linear infinite;
+}
+
+.preloader_image::before, .preloader_image::after {
+    content: '';
+    width: 6vmax;
+    height: 6vmax;
+    display: block;
+    position: absolute;
+    top: calc(50% - 3vmax);
+    left: calc(50% - 3vmax);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 100%;
+    animation: spinLeft 800ms linear infinite;
+}
+
+.preloader_image::after {
+    width: 4vmax;
+    height: 4vmax;
+    top: calc(50% - 2vmax);
+    left: calc(50% - 2vmax);
+    border: 0;
+    border-right: 2px solid var(--accent-color);
+    animation: none;
+}
+
+@keyframes spinLeft {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(720deg);}
+}
+
+@keyframes spinRight {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
